@@ -18,6 +18,23 @@
 ## Estrutura
 ![Diagrama do Factory Method](Factory-Method.png)
 
+- Factory Method tem 4 participantes principais na sua estrutura padrão
+    1. **Product:**
+        - **O que faz:** Define a interface comum para todos os objetos que o *factory method* cria. 
+        - **Responsabilidade:** Garantir que todos os produtos concretos sigam o mesmo contrato, permitindo que o código cliente os utilize de forma polimórfica. 
+
+    2. **ConcreteProduct:**
+        - **O que faz:** É a implementação real e específica do produto. 
+        - **Responsabilidade:** Implementar os métodos e a lógica de negócio definidos pela interface. 
+
+    3. **Creator:**
+        - **O que faz:** Declara o **Factory Method** abstrato ou com implementação padrão, o qual deve retornar um objeto do tipo ***Product***. 
+        - **Responsabilidade:** Define o fluxo de negócio que depende dos produtos e delega a criação real do objeto para suas subclasses. Geralmente invoca o *factory method* dentro de sua própria lógica interna. 
+
+    4. **ConcreteCreator:**
+        - **O que faz:** Subclasse que herda de *Creator* e implementa (ou sobrepõe) o *factory method*. 
+        - **Responsabiliade:** Instanciar e retrornar um *ConcreteProduct* específico. 
+
 
 
 ## Aplicabilidade
