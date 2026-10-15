@@ -2,13 +2,13 @@
 public class MySQLFactory implements DBFFactory {
 
     @Override
-    public void ConexaoDB novaConexao(){
-        System.out.println("Nova conexão no mysql");
+    public ConexaoDB novaConexao(){
+        return new ConexaoMySql();
     }
 
     @Override
-    public void ComandoSQL novoComando(){
-        System.out.println("Novo comando no MySQL");
+    public ComandoSQL novoComando(){
+        return new ComandoMySql();
     }
 
 }

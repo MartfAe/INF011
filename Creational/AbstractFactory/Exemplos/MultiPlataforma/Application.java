@@ -1,14 +1,15 @@
 public class Application {
-    private Botao botao;
-    private Menu menu;
+    private UIFactory factory;
 
     public Application(UIFactory factory){
-        botao = factory.criarBotao();
-        menu = factory.criarMenu();
+        this.factory = factory;
     }
 
     public void renderizarUI(){
-        botao.desenhar();
-        menu.renderizar();
+       Botao botao = factory.criarBotao();
+       Menu menu = factory.criarMenu();
+       botao.desenhar();
+    menu.renderizar();
     }
+
 }
